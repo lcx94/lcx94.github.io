@@ -1,0 +1,78 @@
+@import url(https://fonts.useso.com/css?family=Open+Sans);
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.title{
+  color:#2980B9;
+  font-size: 1.1rem;
+  line-height: 2.5rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.container{
+  padding: 2rem;
+}
+.gallery{
+  width: 100%;
+  max-width: 960px;
+  min-height: 100vh;
+  margin: 2rem auto;
+  
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gallery-item{
+  box-shadow: 2px 2px 8px -1px #3498DB;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  background: #000;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.gallery-item-image{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: lightblue;
+  z-index:20;
+  -webkit-transition:all .5s ease;
+  transition: all .5s ease;
+  bottom:0;
+  overflow: hidden;
+}
+
+.gallery-item:hover .gallery-item-image{
+  bottom: 80px;
+}
+
+.gallery-item-description{
+  color:white;
+  font-size: .8rem;
+  width: 100%;
+  height: 80px;
+  padding: .5rem .8rem;
+  background: #3498DB;
+  position: absolute;
+  bottom:0;
+}

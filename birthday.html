@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC
+  "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>阿朱同学生日快乐！</title>
+<link href="css/zxmk.css" rel="stylesheet" type="text/css"/>
+<script src="js/core.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="index-con" style="z-index: 0">
+  <ul>
+    <li class="in-kct in-course">
+      <a href="photo.html" title="阿朱的相册">
+      <div class="in-block"> <i class="bigger"></i>
+        <span class="ch show" style="display: block;">阿朱的相册</span>
+        <i class="in-none"></i>
+        <span class="in-text" style="display: none;">
+        <p><em>朱漂酿</em>&nbsp;&nbsp;你为什么这么漂酿啊~_~ </p>
+        </span> </div>
+      </a> </li>
+    <li class="in-kct in-quest"> <a href="song.html" title="阿朱唱的歌">
+      <div class="in-block"> <i class=""></i>
+        <span class="ch" style="display: inline;">阿朱唱的歌</span>
+        <i class="in-none"></i>
+        <span class="in-text" style="display: none; width: 280px; left: 30px">
+        <p><em>4首</em>唱吧~</p>
+        <p>阿朱同学我是你的<em>小粉丝~</em>！</p>
+        </span> </div>
+      </a> </li>
+    <li class="in-jbk in-plan"> <a href="data.html" title="阿朱的资料">
+      <div class="in-block"> <i style="display: block;"></i>
+        <span style="display: inline;">阿朱的资料</span>
+        <i class="in-none toLeft1" style="display: none;"></i>
+        <span class="in-text" style="display: none;">
+        <p>除了你</p>
+        <p>我谁都不想要</p>
+        </span> </div>
+      </a> </li>
+    <li class="in-jbk in-report"> <a href="bf.html" title="阿朱的蓝票">
+      <div class="in-block"> <i style="display: block;"></i>
+        <span style="display: inline;">阿朱的蓝票</span>
+        <i class="in-none toLeft2" style="display: none;"></i>
+        <span class="in-text" style="display: none;">
+        <p>我突然的笑了起来</p>
+        <p>因为想到了你。</p>
+        </span> </div>
+      </a> </li>
+    <li class="in-zxl in-forma"> <a href="hap_bir.html" title="happy birthday">
+      <div class="in-block"> <i style="display: block;"></i>
+        <span style="display: inline;">happy</span>
+        <i class="in-none toLeft0 toLeft4" style="display: none;"></i>
+        <span class="in-text" style="display: none;">
+        <p>有你，有事做，有所期盼</p>
+
+        </span> </div>
+      </a> </li>
+    <li class="in-zxl in-means"> <a href="hap_bir.html" title="happy birthday">
+      <div class="in-block"> <i></i> <span>birthday</span>
+        <i class="in-none"></i>
+        <span class="in-text">
+        <p>正因是你，正因是我。</p>
+        <p>刚刚好</p>
+        </span> </div>
+      </a> </li>
+    <li class="in-jbk in-client"> <a href="we.html" title="i love you">
+      <div class="in-block"> <i></i>
+        <span>i love you</span>
+        <i class="in-none"></i>
+        <span class="in-text">
+        <p>我想一直陪着你</p>
+        <p>让你每天都开心</p>
+        </span> </div>
+      </a> </li>
+  </ul>
+</div>
+<script>
+    seajs.use('jquery',function($) {
+        $(function () {
+             //
+            $(".index-con .in-kct").hover(function() {
+                $(this).find('i:first').addClass('smaller').removeClass('bigger')
+                $(this).find('span:first').fadeOut('')
+                $(this).find('.in-text').show('fast').addClass('show')
+                $(this).find('.ch').removeClass('')
+            }, function() {
+                $(this).find('i:first').removeClass('smaller').addClass('bigger')
+                $(this).find('span:first').fadeIn('')
+                $(this).find('.in-text').hide('').removeClass('fast')
+                $(this).find('.ch').addClass('show')
+            })
+            $(".index-con .in-jbk").hover(function() {
+                $(this).find('i:first').addClass('hide')
+                $(this).find('span:first').hide('')
+                $(this).find('.in-text').show('').addClass('show')
+                var num = $(this).index('.in-jbk') + 1;
+                $(this).find('.in-none').show('').addClass('toLeft' + num).removeClass('toRight' + num)
+                $(this).find('.ch1').removeClass('show')
+            }, function() {
+                $(this).find('i:first').addClass('hide')
+                $(this).find('span:first').fadeIn('')
+                $(this).find('.in-text').hide('').removeClass('show')
+                var num = $(this).index('.in-jbk') + 1;
+                $(this).find('.in-none').show().addClass('toRight' + num).removeClass('toLeft' + num)
+                $(this).find('.ch1').addClass('show')
+            })
+            $(".index-con .in-zxl").hover(function() {
+                $(this).find('i:first').addClass('hide')
+                $(this).find('span:first').hide('')
+                $(this).find('.in-text').show().addClass('show')
+                var nums = $(this).index('.in-zxl') + 1;
+                $(this).find('.in-none').show().addClass('toLeft4').removeClass('toRight4')
+                $(this).find('.ch2').removeClass('show')
+            }, function() {
+                $(this).find('i:first').addClass('hide')
+                $(this).find('span:first').fadeIn('fast')
+                $(this).find('.in-text').hide().removeClass('show')
+                $(this).find('.in-none').show().addClass('toRight4').removeClass('toLeft4')
+                $(this).find('.ch2').addClass('show')
+            });
+        });
+    })
+</script>
+
+</body>
+</html>
